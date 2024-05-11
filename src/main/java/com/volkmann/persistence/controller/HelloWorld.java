@@ -3,6 +3,7 @@ package com.volkmann.persistence.controller;
 import java.util.List;
 import java.util.UUID;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,8 +19,12 @@ import com.volkmann.persistence.repositories.PessoaRepository;
 @RestController
 public class HelloWorld {
 	
+	//controller nao deveria acessar diretamente repository, deveria passar por service
 	@Autowired
 	PessoaRepository pessoaRepository;
+	
+	@Autowired 
+	private ModelMapper modelMapper;
 	
 	@PostMapping("hello")
 	public String helloWorld() {
@@ -28,8 +33,12 @@ public class HelloWorld {
 		
 		Endereco endereco = new Endereco();
 		endereco.setApelido("casa");
+		
+		Endereco endereco2 = new Endereco();
+		endereco2.setApelido("ap");
 			
 		pessoa.getEndereco().add(endereco);
+		pessoa.getEndereco().add(endereco2);
 		pessoaRepository.save(pessoa);
 		
 		return "Hello World!";
@@ -37,19 +46,15 @@ public class HelloWorld {
 	
 	@GetMapping("getPessoa")
 	public PessoaDTO getPessoa() {
+		//nova versao usa getReferenceById ao inves de getById
+		//Pessoa pessoaEntity = pessoaRepository.getReferenceById(UUID.fromString("a7303ff6-b5c1-4ad8-9185-e617d76baab4"));
 		
-		Pessoa pessoaEntity = pessoaRepository.getReferenceById(UUID.fromString("a7303ff6-b5c1-4ad8-9185-e617d76baab4"));
+		List<Pessoa> pessoas = pessoaRepository.findAll();
 		
-		//pq exibe hybernate ao inves do objeto real?
+		//no debug, pq exibe hybernate ao inves do objeto real?
 		
-		EnderecoDTO enderecoDTO = new EnderecoDTO();
-		enderecoDTO.id=pessoaEntity.getEndereco().get(0).getId();
-		enderecoDTO.apelido=pessoaEntity.getEndereco().get(0).getApelido();
-		
-		PessoaDTO pessoaDTO = new PessoaDTO();
-		pessoaDTO.id=pessoaEntity.getId();
-		pessoaDTO.name=pessoaEntity.getName();
-		pessoaDTO.enderecos=List.of(enderecoDTO);
+		//nao esta trazendo endereco no mapper
+		PessoaDTO pessoaDTO = modelMapper.map(pessoas.get(0), PessoaDTO.class);
 		
 		return pessoaDTO;
 	}

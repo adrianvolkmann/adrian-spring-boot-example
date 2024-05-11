@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class PersistenceApplication {
 
+	//diferenca shutdowns projetos
+	
 	public static void main(String[] args) {
 		SpringApplication.run(PersistenceApplication.class, args);
 	}
@@ -18,15 +20,15 @@ public class PersistenceApplication {
 	//https://www.red-gate.com/blog/database-devops/flyway-naming-patterns-matter
 	
 	
-	//docker pull postgres
 	/*
 	 
+	 criar docker compose
 	 
     docker run \
     --name postgres \
     -p 5432:5432 \
-    -e POSTGRES_USER=admin \
-    -e POSTGRES_PASSWORD=admin \
+    -e POSTGRES_USER=postgres \
+    -e POSTGRES_PASSWORD=postgres \
     -e POSTGRES_DB=postgres \
     -d postgres
 
