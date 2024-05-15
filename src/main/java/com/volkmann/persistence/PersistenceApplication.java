@@ -34,4 +34,6 @@ public class PersistenceApplication {
 
 
 	 */
+	
+	//https://www.baeldung.com/java-entity-vs-dto
 }
