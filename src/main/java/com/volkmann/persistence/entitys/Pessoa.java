@@ -41,7 +41,7 @@ public class Pessoa {
 	
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name="pessoa_id")
-	private List<Endereco> endereco = new ArrayList<>();
+	private List<Endereco> enderecos = new ArrayList<>();
 
 	
 	
@@ -85,15 +85,15 @@ public class Pessoa {
 	/**
 	 * @return the endereco
 	 */
-	public List<Endereco> getEndereco() {
-		return endereco;
+	public List<Endereco> getEnderecos() {
+		return enderecos;
 	}
 
 	/**
 	 * @param endereco the endereco to set
 	 */
-	public void setEndereco(List<Endereco> endereco) {
-		this.endereco = endereco;
+	public void setEnderecos(List<Endereco> endereco) {
+		this.enderecos = endereco;
 	}
 	
 //	@OneToMany

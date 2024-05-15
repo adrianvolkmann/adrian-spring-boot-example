@@ -2,6 +2,7 @@ package com.volkmann.persistence.controller;
 
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,9 @@ import com.volkmann.persistence.DTO.PessoaDTO;
 import com.volkmann.persistence.entitys.Endereco;
 import com.volkmann.persistence.entitys.Pessoa;
 import com.volkmann.persistence.repositories.PessoaRepository;
+
+import org.modelmapper.TypeToken;
+import java.lang.reflect.Type;
 
 
 @RestController
@@ -37,15 +41,15 @@ public class HelloWorld {
 		Endereco endereco2 = new Endereco();
 		endereco2.setApelido("ap");
 			
-		pessoa.getEndereco().add(endereco);
-		pessoa.getEndereco().add(endereco2);
+		pessoa.getEnderecos().add(endereco);
+		pessoa.getEnderecos().add(endereco2);
 		pessoaRepository.save(pessoa);
 		
 		return "Hello World!";
 	}
 	
 	@GetMapping("getPessoa")
-	public PessoaDTO getPessoa() {
+	public List<PessoaDTO> getPessoa() {
 		//nova versao usa getReferenceById ao inves de getById
 		//Pessoa pessoaEntity = pessoaRepository.getReferenceById(UUID.fromString("a7303ff6-b5c1-4ad8-9185-e617d76baab4"));
 		
@@ -53,10 +57,18 @@ public class HelloWorld {
 		
 		//no debug, pq exibe hybernate ao inves do objeto real?
 		
-		//nao esta trazendo endereco no mapper
 		PessoaDTO pessoaDTO = modelMapper.map(pessoas.get(0), PessoaDTO.class);
 		
-		return pessoaDTO;
+		List<PessoaDTO> collect = pessoas.stream().map(pessoa -> modelMapper.map(pessoa,PessoaDTO.class))
+		.collect(Collectors.toList());
+		
+		Type listType = new TypeToken<List<PessoaDTO>>(){}.getType();
+		List<PessoaDTO> postDtoList = modelMapper.map(pessoas,listType);
+		
+		
+//		https://www.baeldung.com/java-modelmapper-lists
+		
+		return collect;
 	}
 
 }

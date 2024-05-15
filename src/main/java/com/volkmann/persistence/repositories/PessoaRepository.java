@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.volkmann.persistence.entitys.Pessoa;
 
-@Repository
+//@Repository
 public interface PessoaRepository extends JpaRepository<Pessoa, UUID>{
 
 }
