@@ -33,11 +33,11 @@ public class EntityWithJson {
 	
 	//ver tipos de Json nativo
 	//testando
-	private Gson gson = new Gson();
+	//private Gson gson = new Gson();
 	
-	public void testeGson() {
+	//public void testeGson() {
 		
-	}
+	//}
 
 	public UUID getId() {
 		return id;
