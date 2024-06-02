@@ -1,7 +1,5 @@
 # adrian-spring-boot-example
 
-# trocar nome projeto
-
 # atualizar para java 21
 Naming convections
 
