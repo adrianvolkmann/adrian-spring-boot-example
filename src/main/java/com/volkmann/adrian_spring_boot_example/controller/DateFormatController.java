@@ -19,6 +19,14 @@ import jakarta.validation.Valid;
 @RestController
 public class DateFormatController {
 
+	
+	
+	  //"localDateTime" : "2024-06-02T10:19:57.570Z" , 
+	  // "localDate" : "2024-06-01" ,
+	   //"localTime" : "21:44:24" ,
+	   //"zonedDateTime" : "2024-06-01T00:00:00.123456-09:00" 
+		   
+		   
 	@Autowired
 	DateFormatRepository dateFormatRepository;
 	

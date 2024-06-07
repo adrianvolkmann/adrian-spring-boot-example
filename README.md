@@ -1,6 +1,5 @@
 # adrian-spring-boot-example
 
-# atualizar para java 21
 Naming convections
 
 para o nome do projeto utilizamos o padrao Kebab Case.
