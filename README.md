@@ -20,3 +20,13 @@ packages com.example.demo
 
 # tecnologias utilizadas
 modell maper
+
+exception handler
+
+biblioteca swagger
+
+profiles/properties
+
+validation
+
+relacionamento entidades/eagear leazy
