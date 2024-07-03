@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:16.3
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+    ports:
+      - "5432:5432"
+  memcached:
+#docker container run --name memcached -d -p 11211:11211 memcached:1.6.29
+    image: memcached:1.6.29
+    ports: 
+      - "11211:11211"
+    

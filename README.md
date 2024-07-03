@@ -30,3 +30,13 @@ profiles/properties
 validation
 
 relacionamento entidades/eagear leazy
+
+
+# docker compose
+Para rodar o comando abaixo é necessario ter o [docker desktop](https://www.docker.com/products/docker-desktop/) instalado;
+
+```bash
+docker-compose up -d
+```
+
+descrever oq eh imagem alpine

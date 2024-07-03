@@ -47,6 +47,7 @@ public class OneToManyExamplesController {
 	public List<PessoaDTO> getPessoa() {
 		List<Pessoa> pessoas = pessoaRepository.findAll();
 		//no debug, pq exibe hybernate ao inves do objeto real?
+		//quando eh lazy
 		
 //		List<PessoaDTO> collect = pessoas.stream().map(pessoa -> modelMapper.map(pessoa,PessoaDTO.class)).collect(Collectors.toList());
 		
