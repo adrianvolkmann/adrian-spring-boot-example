@@ -27,7 +27,17 @@ biblioteca swagger
 
 profiles/properties
 
+
+Ferramenta para gerar SQL para gerar dados https://www.mockaroo.com/
+
+
+properties por perfil, 
+
+
+fazer todos endpoints responder com type json etc
+
 validation
+
 
 relacionamento entidades/eagear leazy
 
