@@ -11,8 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class PaginationController {
 
-	// autowired vs inject
-
 	@Autowired
 	PaginationRepository paginationRepository;
 

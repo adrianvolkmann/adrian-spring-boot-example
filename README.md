@@ -50,3 +50,40 @@ docker-compose up -d
 ```
 
 descrever oq eh imagem alpine
+
+
+
+nomenclatura usada  no flyway
+
+Escolhido a nomenclatura a seguir
+Vyyyy.MM.dd.HH.mm__descricao.sql
+
+No link vc pode verificar o padrao da nomenclatura utilizada.
+https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
+
+Exemplo:
+V2024.07.18.11.55__pagination.sql
+
+No caso optamos em usar o Flyway executando em ordem. Com esta nomenclatura a data atual sempre sera o ultimo arquivo.
+
+falta implementar validacao de nomenclatura ao subir o projeto
+
+
+
+criacao do swagger
+springBoot Actuator
+record vs class (toString, metodos default)
+translations
+properties com perfil
+classe exemplo todas validations
+classe todos tipos de dados do postgrees
+
+separacao das pacotes por Domain Driven
+
+docker compose
+
+juntei aqui os exemplos do memcached
+ajustar documento que descreve padrao de nomenclatura
+
+ciar pasta para armazenar os MD
+
