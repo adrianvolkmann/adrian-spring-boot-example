@@ -15,7 +15,6 @@ public class PaginationController {
 	PaginationRepository paginationRepository;
 
 	/*
-      
 	  //implementação padrao
 	  - agilidade desenvolvimento	  
 	  - aceita qualquer parametro, ja abrange novas alteracoes nas entidades
@@ -28,9 +27,7 @@ public class PaginationController {
 	   - evita erros 500
 	   - evita lixo
 	   - qualquer novo campo necessita implementaçao
-	  
-	 */
-	
+	 	 */
 	
 //	localhost:8080/pagination-example-default?page=0&size=10&sort=name,asc
 	@GetMapping("pagination-example-default")
@@ -58,10 +55,5 @@ public class PaginationController {
 		return output;
 	}
 	
-	//why use response entity
-	//qual boa pratica pra retornar 
-	
-	
-	//implementacao filtro dynamico
 	
 }

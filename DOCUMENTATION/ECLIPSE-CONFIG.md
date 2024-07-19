@@ -1,3 +1,6 @@
+gravar aqui plugins usados, configurações da IDE, etc
+
+
 plugins
 
 SQL EDITOR

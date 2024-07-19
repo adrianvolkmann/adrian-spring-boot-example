@@ -53,6 +53,7 @@ Ferramenta para gerar dados mock https://www.mockaroo.com/
 
 pendencia:
 - implementar validacao de nomenclatura dos arquivos ao subir o projeto
+https://stackoverflow.com/questions/62953092/how-to-programmatically-trigger-flyway-migration-before-spring-boot-flyway-ootb
 
 ### translations
 exemplos no pacote com.volkmann.adrian_spring_boot_example.translation
@@ -71,4 +72,13 @@ o swagger estara disponivel em *http://server:port/context-path/swagger-ui.html*
 
 pendencia:
 - remover as entities do swagger
+
+### paginação
+
+implementação padrao usando spring
+
+verificar pacote **com.volkmann.adrian_spring_boot_example.pagination**
+
+
+
 

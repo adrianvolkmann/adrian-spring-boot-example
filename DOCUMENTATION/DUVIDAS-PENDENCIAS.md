@@ -6,11 +6,15 @@ public String helloWorld(Locale locale) throws Exception { // testar esse trowhs
 
 	
 	profiles/properties
+	properties com perfil
 
+	
 	
 fazer todos endpoints responder com type json etc
 
 validation
+classe exemplo todas validations
+validar UUID com java validation
 
 
 relacionamento entidades/eagear leazy
@@ -22,8 +26,8 @@ relacionamento entidades/eagear leazy
 	
 record vs class (toString, metodos default)
 
-properties com perfil
-classe exemplo todas validations
+
+
 classe todos tipos de dados do postgrees
 
 
@@ -31,15 +35,18 @@ classe todos tipos de dados do postgrees
 separacao das pacotes por Domain Driven
 
 
+implementacao filtro SQL ,dynamico , where = xxx, order by yyyy
+
+
 -----
 criar formatador do fonte com padroes de nomenclatura java
-camelCase para variáveis, atributos e métodos
-
-PascalCase para classes, enum e interfaces
-
-SCREAMING_SNAKE_CASE para constantes
-
-packages com.example.demo	
-
-
 convensoes nomes java [link](https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html)
+
+criar sonar para avaliar:
+- classe sem tostring, equal, hash, etc
+- import nao utilizado
+---------
+
+//why use response entity, sempre retornar response entity?
+	//qual boa pratica pra retornar 
+	
