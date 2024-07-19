@@ -1,4 +1,4 @@
-package com.volkmann.adrian_spring_boot_example.controller;
+package com.volkmann.adrian_spring_boot_example.jsonexamples;
 
 import java.util.List;
 
@@ -7,8 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.volkmann.adrian_spring_boot_example.entitys.EntityWithJson;
-import com.volkmann.adrian_spring_boot_example.repositories.EntityWithJsonRepository;
+import com.volkmann.adrian_spring_boot_example.sqltypes.EntityWithJsonRepository;
 
 @RestController
 public class JsonExampleController {

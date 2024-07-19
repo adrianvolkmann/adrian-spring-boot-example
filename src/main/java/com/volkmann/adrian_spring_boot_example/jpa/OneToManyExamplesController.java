@@ -10,11 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.volkmann.adrian_spring_boot_example.DTO.PessoaDTO;
-import com.volkmann.adrian_spring_boot_example.entitys.Endereco;
-import com.volkmann.adrian_spring_boot_example.entitys.Pessoa;
-import com.volkmann.adrian_spring_boot_example.repositories.PessoaRepository;
-
 
 @RestController
 public class OneToManyExamplesController {

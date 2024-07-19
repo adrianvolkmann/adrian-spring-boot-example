@@ -1,4 +1,4 @@
-package com.volkmann.adrian_spring_boot_example.DTO;
+package com.volkmann.adrian_spring_boot_example.sqltypes;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

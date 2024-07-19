@@ -60,3 +60,17 @@ criar sonar para avaliar:
 //why use response entity, sempre retornar response entity?
 	//qual boa pratica pra retornar 
 	
+--------------
+criar context path /api no properties, consigo aplicar filtros dessa forma?
+
+---------------
+logger imprimir de qual endpoint originou o log
+
+----
+nome de packages, espacos, -??
+
+
+----
+atualizar PDI com filters
+
+	

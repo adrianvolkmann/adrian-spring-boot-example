@@ -1,4 +1,4 @@
-package com.volkmann.adrian_spring_boot_example.DTO;
+package com.volkmann.adrian_spring_boot_example.jpa;
 
 import java.util.ArrayList;
 import java.util.List;

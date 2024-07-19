@@ -1,4 +1,4 @@
-package com.volkmann.adrian_spring_boot_example.controller;
+package com.volkmann.adrian_spring_boot_example.sqltypes;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -9,10 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.volkmann.adrian_spring_boot_example.DTO.DateFormatDTO;
-import com.volkmann.adrian_spring_boot_example.entitys.DateFormatEntity;
-import com.volkmann.adrian_spring_boot_example.repositories.DateFormatRepository;
 
 import jakarta.validation.Valid;
 

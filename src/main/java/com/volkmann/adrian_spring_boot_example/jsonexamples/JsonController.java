@@ -1,4 +1,4 @@
-package com.volkmann.adrian_spring_boot_example.controller;
+package com.volkmann.adrian_spring_boot_example.jsonexamples;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -10,13 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.volkmann.adrian_spring_boot_example.DTO.EmployeeDTO;
-import com.volkmann.adrian_spring_boot_example.DTO.ProjectDTO;
-import com.volkmann.adrian_spring_boot_example.entitys.Employee;
-import com.volkmann.adrian_spring_boot_example.entitys.Project;
-import com.volkmann.adrian_spring_boot_example.repositories.EmployeeRepository;
-import com.volkmann.adrian_spring_boot_example.repositories.ProjectRepository;
-
 
 @RestController
 public class ManyToManyExamplesController {
