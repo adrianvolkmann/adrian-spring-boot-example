@@ -1,4 +1,4 @@
-package com.volkmann.adrian_spring_boot_example.persistence.onetooneunidirectional;
+package com.volkmann.adrian_spring_boot_example.jpa.onetooneunidirectional;
 
 import java.util.List;
 

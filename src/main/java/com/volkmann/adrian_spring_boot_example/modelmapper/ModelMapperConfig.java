@@ -1,11 +1,11 @@
-package com.volkmann.adrian_spring_boot_example.config;
+package com.volkmann.adrian_spring_boot_example.modelmapper;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration //annotation indicates that the class will be used by JavaConfig as a source of bean definitions.
-public class Config {
+public class ModelMapperConfig {
 
     @Bean
     ModelMapper modelMapper() {

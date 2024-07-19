@@ -1,4 +1,4 @@
-package com.volkmann.adrian_spring_boot_example.config;
+package com.volkmann.adrian_spring_boot_example.exceptions;
 
 import java.util.HashMap;
 import java.util.Map;

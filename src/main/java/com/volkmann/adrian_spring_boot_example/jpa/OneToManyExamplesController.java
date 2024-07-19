@@ -1,4 +1,4 @@
-package com.volkmann.adrian_spring_boot_example.controller;
+package com.volkmann.adrian_spring_boot_example.jpa;
 
 import java.lang.reflect.Type;
 import java.util.List;

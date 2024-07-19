@@ -4,7 +4,7 @@ Projeto implementando exemplos de varias tecnologias para servir de exemplo para
 
 Na pasta [DOCUMENTATION](https://github.com/adrianvolkmann/adrian-spring-boot-example/tree/main/DOCUMENTATION) existem mais arquivos de documentação.
 
-###Naming convections
+### Naming convections
 
 para o nome do projeto utilizamos o padrao Kebab Case.
 Exemplo: kebab-case-example
@@ -79,6 +79,15 @@ implementação padrao usando spring
 
 verificar pacote **com.volkmann.adrian_spring_boot_example.pagination**
 
+### RECORD vs CLASS
+
+[https://www.javaguides.net/2023/12/difference-between-class-and-record-in-java.html](https://www.javaguides.net/2023/12/difference-between-class-and-record-in-java.html)
+
+The compiler automatically provides a public constructor, as well as implementations of equals(), hashCode(), and toString() methods based on the record components.
+
+```java
+public record User(Long id, String firstName, String lastName, String email) {}
+```
 
 
 
