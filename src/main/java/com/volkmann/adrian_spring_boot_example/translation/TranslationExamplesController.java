@@ -15,7 +15,7 @@ public class TranslationExamplesController {
 
 	// basta enviar "Accept-Language" com "en-US" que ja faz a traducao
 	@PostMapping(value = "/hello")
-	public String helloWorld(Locale locale) throws Exception { // testar esse trowhs exceptions
+	public String helloWorld(Locale locale) throws Exception {
 
 		System.out.println("Default Locale= " + Locale.getDefault());
 		System.out.println("endpoint locale= " + locale);

@@ -1,89 +1,74 @@
 # adrian-spring-boot-example
 
-Naming convections
+Projeto implementando exemplos de varias tecnologias para servir de exemplo para futuras implementações e tambem aumentar produtividade do dia a dia.
+
+Na pasta DOCUMENTATION existem mais arquivos de documentação.
+
+###Naming convections
 
 para o nome do projeto utilizamos o padrao Kebab Case.
 Exemplo: kebab-case-example
 
 este padrao é o mesmo utilizado nos projeto spring boot
 
-convensoes nomes java
-https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html
-
-camelCase para variáveis, atributos e métodos
-
-PascalCase para classes, enum e interfaces
-
-SCREAMING_SNAKE_CASE para constantes
-
-packages com.example.demo
-
-# tecnologias utilizadas
-modell maper
-
-exception handler
-
-biblioteca swagger
-
-profiles/properties
-
-
-Ferramenta para gerar SQL para gerar dados https://www.mockaroo.com/
-
-
-properties por perfil, 
-
-
-fazer todos endpoints responder com type json etc
-
-validation
-
-
-relacionamento entidades/eagear leazy
-
-
-# docker compose
+### docker compose
 Para rodar o comando abaixo é necessario ter o [docker desktop](https://www.docker.com/products/docker-desktop/) instalado;
 
 ```bash
 docker-compose up -d
 ```
+pendencia:
+- descrever oq eh imagem alpine
 
-descrever oq eh imagem alpine
+### exception handler
+
+criar classe para responder globalmente todas exceções lancadas na aplicação
+
+criar classe com @ControllerAdvice
+
+anotar o metodo com @ExceptionHandler(MethodArgumentNotValidException.class) para tratar a exception desejada
+
+pendencia:
+- implementar exemplos das exceptions mais comuns
 
 
+### flyway
 
-nomenclatura usada  no flyway
+no projeto spring basta adicionar a dependencia e adicionar os arquivos em src/main/resources/db/migration
+
+**nomenclatura usada  no flyway**
 
 Escolhido a nomenclatura a seguir
-Vyyyy.MM.dd.HH.mm__descricao.sql
 
-No link vc pode verificar o padrao da nomenclatura utilizada.
-https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
+**Vyyyy.MM.dd.HH.mm__descricao.sql**
+
+No [link](https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html) vc pode verificar o padrao da nomenclatura utilizada.
 
 Exemplo:
 V2024.07.18.11.55__pagination.sql
 
-No caso optamos em usar o Flyway executando em ordem. Com esta nomenclatura a data atual sempre sera o ultimo arquivo.
+No caso optei em usar o Flyway executando em ordem. Com esta nomenclatura a data atual sempre sera o ultimo arquivo.
 
-falta implementar validacao de nomenclatura ao subir o projeto
+Ferramenta para gerar dados mock https://www.mockaroo.com/
 
+pendencia:
+- implementar validacao de nomenclatura dos arquivos ao subir o projeto
 
+### translations
+exemplos no pacote com.volkmann.adrian_spring_boot_example.translation
 
-criacao do swagger
-springBoot Actuator
-record vs class (toString, metodos default)
-translations
-properties com perfil
-classe exemplo todas validations
-classe todos tipos de dados do postgrees
+pendencia:
+ - deve-se tratar traducao no back-end ou front-end, no frond-end é normal existir campos adicionais para serem traduzidos.
+ 
+ 
+- existe padrao de nomenclatura para criar as chaves de tradução? 
 
-separacao das pacotes por Domain Driven
+### swagger
 
-docker compose
+basta adicionar a dependencia **springdoc-openapi-starter-webmvc-ui**
 
-juntei aqui os exemplos do memcached
-ajustar documento que descreve padrao de nomenclatura
+o swagger estara disponivel em *http://server:port/context-path/swagger-ui.html*
 
-ciar pasta para armazenar os MD
+pendencia:
+- remover as entities do swagger
 
