@@ -4,6 +4,6 @@ import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface DateFormatRepository extends JpaRepository<DateFormatEntity, UUID> {
+public interface SqlTypesRepository extends JpaRepository<SqlTypesEntity, UUID> {
 
 }
