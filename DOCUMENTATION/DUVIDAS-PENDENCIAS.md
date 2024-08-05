@@ -72,5 +72,8 @@ nome de packages, espacos, -??
 
 ----
 atualizar PDI com filters
+-----
+
+testes esta excutand migrations em producao
 
 	

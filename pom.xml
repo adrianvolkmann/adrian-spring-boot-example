@@ -83,6 +83,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 
+			<!-- validar -->
 			<plugin>
 				<groupId>net.revelc.code.formatter</groupId>
 				<artifactId>formatter-maven-plugin</artifactId>
@@ -91,5 +92,18 @@
 			
 		</plugins>
 	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>1826aa60cd9b-releases</name>
+			<url>http://localhost:8081/artifactory/libs-release-local</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>1826aa60cd9b-snapshots</name>
+			<url>http://localhost:8081/artifactory/libs-snapshot-local</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 </project>
