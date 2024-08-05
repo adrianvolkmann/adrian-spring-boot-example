@@ -13,9 +13,17 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>adrian-spring-boot-example</name>
 	<description>persistence</description>
+	
+	<scm>
+		<connection>scm:git:git://server_name[:port]/path_to_repository</connection>
+	</scm>
+	
+	
 	<properties>
 		<java.version>21</java.version>
 	</properties>
+	
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
