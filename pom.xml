@@ -13,6 +13,7 @@
 	<name>adrian-spring-boot-example</name>
 	<description>persistence</description>
 	
+	<!-- necessario para fazer a release-->
 	<scm>
 		<connection>scm:git:https://github.com/adrianvolkmann/adrian-spring-boot-example</connection>
 	  <tag>HEAD</tag>
