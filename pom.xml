@@ -15,7 +15,7 @@
 	<description>persistence</description>
 	
 	<scm>
-		<connection>scm:git:git://server_name[:port]/path_to_repository</connection>
+		<connection>scm:git:https://github.com/adrianvolkmann/adrian-spring-boot-example</connection>
 	</scm>
 	
 	
