@@ -107,16 +107,24 @@ configurar o pom com <distributionManagement> Set me Up
 	</distributionManagement>
 
 
-para o comando release funcionar é necessario possuir a tag populada, so de exisitr o comando ja funciona
+para o comando release funcionar é necessario possuir a tag populada
 
 <scm>
 		<connection>scm:git:git://server_name[:port]/path_to_repository</connection>
 </scm>
 
-
+alterar a versao:
 mvn versions:set -DnewVersion='0.0.3-SNAPSHOT'
+
+-verificar cada linha do comando
+-faz deploy da versao release, (javadoc, sources, jar, pom)
+-nao faz deploy da snapshot, executei na snapshot, atualizou versao e atualizou e manteve com snapshot
 
 mvn --batch-mode --update-snapshots -DreleaseVersion='0.0.3' -DdevelopmentVersion='0.0.3-SNAPSHOT' -DautoVersionSubmodules=true release:clean release:prepare release:perform
 
+mvn deploy, gera apenas pom e jar
 
+verificar utilizacao do snapshot
+parametro mvn install forca atualizar snapshot
+criar o docker-compose
 	

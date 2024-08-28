@@ -51,9 +51,8 @@ No caso optei em usar o Flyway executando em ordem. Com esta nomenclatura a data
 
 Ferramenta para gerar dados mock https://www.mockaroo.com/
 
-pendencia:
-- implementar validacao de nomenclatura dos arquivos ao subir o projeto
-https://stackoverflow.com/questions/62953092/how-to-programmatically-trigger-flyway-migration-before-spring-boot-flyway-ootb
+Ferramenta para testar regex: https://www.trackingplan.com/regex-tester
+
 
 ### translations
 exemplos no pacote com.volkmann.adrian_spring_boot_example.translation
