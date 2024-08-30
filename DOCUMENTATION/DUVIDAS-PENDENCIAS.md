@@ -128,3 +128,7 @@ verificar utilizacao do snapshot
 parametro mvn install forca atualizar snapshot
 criar o docker-compose
 	
+
+esta excutando migration ao executar testes	
+	
+	

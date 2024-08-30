@@ -49,6 +49,20 @@ V2024.07.18.11.55__pagination.sql
 
 No caso optei em usar o Flyway executando em ordem. Com esta nomenclatura a data atual sempre sera o ultimo arquivo.
 
+Implementado validação dos nomes dos arquivos de migration. Caso não passe na validação, o projeto spring boot falhará na inicialização.
+
+**Sempre executar uma migration ao subir o projeto:**
+
+- Criar um arquivo com o prefixo "R", porém so é executado quando o conteudo do arquivo é alterado. 
+- Outra opção é adicionar um placeholder no arquivo SQL, como no exemplo abaixo, que utiliza um timestamp. Dessa forma, o conteúdo do script muda a cada execução, garantindo que a migração seja sempre aplicada. No entanto, o ponto negativo é que cada execução do script gera uma nova entrada na tabela de histórico do Flyway, acumulando dados desnecessários.
+
+```sql
+-- ${flyway:timestamp}
+```
+
+- Uma alternativa é a executação diramente via codigo.
+
+
 Ferramenta para gerar dados mock https://www.mockaroo.com/
 
 Ferramenta para testar regex: https://www.trackingplan.com/regex-tester
