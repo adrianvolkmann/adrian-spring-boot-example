@@ -1,6 +1,7 @@
 package com.volkmann.adrian_spring_boot_example.memcached;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import net.spy.memcached.MemcachedClient;
 
 @RestController
+@Profile("memcached")
 public class MemcachedExamplesController {
 	
 	private static final int EXPIRATION = 60; // 1 min
