@@ -30,5 +30,6 @@ class AdrianSpringBootExampleApplicationTests {
             System.out.println("No active profiles");
         }
 	}
+	//documentar a configuração que foi feita nos testes
 
 }
