@@ -17,8 +17,7 @@ Para rodar o comando abaixo é necessario ter o [docker desktop](https://www.doc
 ```bash
 docker-compose up -d
 ```
-pendencia:
-- descrever oq eh imagem alpine
+Uma imagem Docker Alpine é uma imagem leve baseada no Alpine Linux, uma distribuição minimalista projetada para ser pequena e eficiente.
 
 ### exception handler
 

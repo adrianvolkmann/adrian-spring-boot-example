@@ -7,7 +7,8 @@ import org.springframework.context.support.ResourceBundleMessageSource;
 
 @Configuration
 public class TranslationConfig {
-
+//implements WebMvcConfigurer
+	
 	@Bean
 	MessageSource messageSource() {
 		ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
@@ -15,5 +16,28 @@ public class TranslationConfig {
 		messageSource.setDefaultEncoding("UTF-8");
 		return messageSource;
 	}
+
+	//spring.messages.basename=messages
+	
+	/* 
+	@Bean
+	public LocaleChangeInterceptor localeChangeInterceptor() {
+	    LocaleChangeInterceptor localeChangeInterceptor = new LocaleChangeInterceptor();
+	    localeChangeInterceptor.setParamName("lang");
+	    return localeChangeInterceptor;
+	}
+	
+
+@Override
+public void addInterceptors(InterceptorRegistry registry) {
+    registry.addInterceptor(localeChangeInterceptor());
+}
+
+
+@Override
+public void addInterceptors(InterceptorRegistry registry) {
+    registry.addInterceptor(localeChangeInterceptor());
+}
+*/
 
 }
