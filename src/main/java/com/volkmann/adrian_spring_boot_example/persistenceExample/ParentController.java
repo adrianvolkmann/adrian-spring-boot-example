@@ -24,14 +24,11 @@ import jakarta.validation.Valid;
 @RequestMapping("/parent")
 public class ParentController {
 
-	// porque private
 	// porque usar construtor e nao autowired
 
 	private final ParentEntityRepository parentRepository;
 	private final ModelMapper modelMapper;
 
-	//falta colocar anotações nos records
-	
 	public ParentController(ParentEntityRepository parentRepository, ModelMapper modelMapper) {
 		this.parentRepository = parentRepository;
 		this.modelMapper = modelMapper;

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class SqlTypesController {
 
 	@Autowired
-	SqlTypesRepository sqlTypesRepository;
+	private SqlTypesRepository sqlTypesRepository;
 
 	// Endpoint para criar uma nova entidade
 	@PostMapping("/createSqlType")
