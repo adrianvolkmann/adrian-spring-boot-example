@@ -101,5 +101,25 @@ The compiler automatically provides a public constructor, as well as implementat
 public record User(Long id, String firstName, String lastName, String email) {}
 ```
 
+### TIPOS DE DADOS SQL
+
+TIPO ENUM
+
+O campo VARCHAR ocupa mais espaço em comparação a um campo ENUM, que geralmente é armazenado internamente como inteiros. Para grandes conjuntos de dados, isso pode resultar em maior consumo de armazenamento e impacto na performance, especialmente se a coluna for frequentemente usada em consultas ou índices.
+
+Quando ocorre uma violação da restrição CHECK, a mensagem de erro é genérica e pode não fornecer detalhes claros sobre o valor esperado. Com ENUM, as ferramentas de ORM e o próprio PostgreSQL costumam fornecer mensagens de erro mais específicas.
+
+Quando usar cada abordagem
+
+   Use VARCHAR com CHECK quando a flexibilidade é importante, e você precisa de uma solução que seja compatível com outros bancos de dados ou ferramentas, e onde alterações são frequentes.
+    Use ENUM quando o conjunto de valores for estável, e você deseja a eficiência e o controle mais rígido oferecido pelo PostgreSQL, especialmente se performance e integridade forem críticas para a aplicação.
+
+
+
+
+###criar exemplo completo funcional de persistencia, usando record, moddelmapper, validation api
+
+
+###cadastrar global exceptions
 
 

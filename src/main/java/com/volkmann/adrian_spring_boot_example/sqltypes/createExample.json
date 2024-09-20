@@ -1,0 +1,16 @@
+{
+  "id": "123e4567-e89b-12d3-a456-426614174000",
+  "campoInteger": 42,
+  "campoFloat": 3.14,
+  "campoDouble": 12345.6789,
+  "campoBoolean": true,
+  "campoVarcharLimitado": "Texto limitado a 50 caracteres",
+  "campoVarchar": "Texto mais longo para campo varchar",
+  "campoLocalDate": "2024-09-19",
+  "campoLocalTime": "13:45:30",
+  "campoLocalDateTime": "2024-09-19T13:45:30",
+  "campoDateTimeZoned": "2024-09-19T13:45:30+01:00[Europe/London]",
+  "campoJsonb": "{\"key\": \"value\", \"number\": 123}",
+  "campoEnum": "ACTIVE",
+  "campoEnumString": "PENDING"
+}

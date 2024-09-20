@@ -14,7 +14,7 @@ public class TranslationExamplesController {
 	ResourceBundleMessageSource messageSource;
 
 	// basta enviar "Accept-Language" com "en-US" que ja faz a traducao
-	@PostMapping(value = "/hello")
+	@PostMapping(value = "/translationExample")
 	public String helloWorld(Locale locale) throws Exception {
 
 		System.out.println("Default Locale= " + Locale.getDefault());

@@ -1,5 +1,6 @@
 package com.volkmann.adrian_spring_boot_example.translation;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -7,37 +8,19 @@ import org.springframework.context.support.ResourceBundleMessageSource;
 
 @Configuration
 public class TranslationConfig {
-//implements WebMvcConfigurer
-	
+
+	@Value("${spring.messages.basename}")
+	private String basename;
+
+	@Value("${spring.messages.encoding}")
+	private String encoding;
+
 	@Bean
 	MessageSource messageSource() {
 		ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
-		messageSource.setBasename("translations/messages");
-		messageSource.setDefaultEncoding("UTF-8");
+		messageSource.setBasename(basename);
+		messageSource.setDefaultEncoding(encoding);
 		return messageSource;
 	}
-
-	//spring.messages.basename=messages
-	
-	/* 
-	@Bean
-	public LocaleChangeInterceptor localeChangeInterceptor() {
-	    LocaleChangeInterceptor localeChangeInterceptor = new LocaleChangeInterceptor();
-	    localeChangeInterceptor.setParamName("lang");
-	    return localeChangeInterceptor;
-	}
-	
-
-@Override
-public void addInterceptors(InterceptorRegistry registry) {
-    registry.addInterceptor(localeChangeInterceptor());
-}
-
-
-@Override
-public void addInterceptors(InterceptorRegistry registry) {
-    registry.addInterceptor(localeChangeInterceptor());
-}
-*/
 
 }

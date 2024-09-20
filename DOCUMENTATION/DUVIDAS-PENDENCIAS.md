@@ -132,3 +132,7 @@ criar o docker-compose
 esta excutando migration ao executar testes	
 	
 	
+	//diferenca shutdowns projetos
+	
+	
+	//@DataJpaTest

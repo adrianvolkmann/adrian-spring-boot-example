@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 public class FlywayConfig {
 
 	@Bean
-	public FlywayMigrationInitializer flywayInitializer(Flyway flyway, ObjectProvider<FlywayMigrationStrategy> migrationStrategy) {
+	FlywayMigrationInitializer flywayInitializer(Flyway flyway, ObjectProvider<FlywayMigrationStrategy> migrationStrategy) {
 		return new CustonFlywayMigrationInitializer(flyway, migrationStrategy.getIfAvailable());
 	}
 

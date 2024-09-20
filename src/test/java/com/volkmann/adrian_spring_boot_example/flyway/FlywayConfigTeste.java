@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Bean;
 public class FlywayConfigTeste {
 
 	@Bean(name = "FlywayMigrationInitializerTest")
-	public FlywayMigrationInitializer flywayInitializer(Flyway flyway, ObjectProvider<FlywayMigrationStrategy> migrationStrategy) {
+	FlywayMigrationInitializer flywayInitializer(Flyway flyway, ObjectProvider<FlywayMigrationStrategy> migrationStrategy) {
 		System.err.println("EXECUTOU O BEAN DO TESTE");
 		return new CustonFlywayMigrationInitializer(flyway, migrationStrategy.getIfAvailable());
 	}
