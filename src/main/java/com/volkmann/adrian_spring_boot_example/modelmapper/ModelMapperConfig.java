@@ -4,7 +4,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration //annotation indicates that the class will be used by JavaConfig as a source of bean definitions.
+@Configuration
 public class ModelMapperConfig {
 
     @Bean

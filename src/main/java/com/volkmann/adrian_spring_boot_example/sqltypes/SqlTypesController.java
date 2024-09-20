@@ -14,7 +14,7 @@ public class SqlTypesController {
 	SqlTypesRepository sqlTypesRepository;
 
 	// Endpoint para criar uma nova entidade
-	@PostMapping
+	@PostMapping("/createSqlType")
 	public ResponseEntity<SqlTypesEntity> createSqlTypeEntity(@RequestBody SqlTypesEntity sqlTypesEntity) {
 		SqlTypesEntity savedEntity = sqlTypesRepository.save(sqlTypesEntity);
 		return new ResponseEntity<>(savedEntity, HttpStatus.CREATED);

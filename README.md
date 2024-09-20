@@ -118,7 +118,7 @@ Quando usar cada abordagem
 
 
 ###criar exemplo completo funcional de persistencia, usando record, moddelmapper, validation api
-
+//testar @Validated
 
 ###cadastrar global exceptions
 
