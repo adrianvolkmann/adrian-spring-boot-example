@@ -11,4 +11,14 @@ services:
     image: memcached:1.6.29
     ports: 
       - "11211:11211"
-    
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin
+    ports:
+      - "5672:5672" # Porta padrão do protocolo AMQP
+      - "15672:15672" # Porta do painel de gerenciamento (RabbitMQ Management Plugin)
+    volumes:
+      - C:\dev\rabbitmq\volumes\rabbitmq:/var/lib/rabbitmq # estudar +
