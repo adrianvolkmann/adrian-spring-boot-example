@@ -7,7 +7,7 @@ Bom guia para nomear/formatar SQLS: [https://www.sqlstyle.guide/](https://www.sq
 ```sql
 CREATE TABLE IF NOT EXISTS Pagination
 (
-   id UUID NOT NULL primary key ,
+   id UUID NOT NULL PRIMARY KEY ,
    name VARCHAR (100),
    idade  INTEGER,
    data_nascimento DATE

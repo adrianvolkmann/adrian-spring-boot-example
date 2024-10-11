@@ -1,32 +1,8 @@
- estudar melhor injeção dependencia,
- mantem apenas uma instancia rodando?
- semelhante a static?
- 
- static or Bean?
- 
- ------
- 
-injection com private?
-
-injectao por campo ou construtor
- 
- ---
- 
- @PostMapping(value = "/hello")
-public String helloWorld(Locale locale) throws Exception { // testar esse trowhs exceptions
-
------
-	profiles/properties
-	properties com perfil
 
 	
 ---	
 fazer todos endpoints responder com type json etc
 ----
-validation
-classe exemplo todas validations
-validar UUID com java validation
-validation en records
 
 ----
 relacionamento entidades/eagear leazy
@@ -42,7 +18,6 @@ classe todos tipos de dados do postgrees
 
 ------
 
-separacao das pacotes por Domain Driven
 
 ---
 implementacao filtro SQL ,dynamico , where = xxx, order by yyyy
@@ -74,7 +49,6 @@ nome de packages, espacos, -??
 atualizar PDI com filters
 -----
 
-testes esta excutand migrations em producao
 
 --------------------
 artirfactory
@@ -128,8 +102,6 @@ verificar utilizacao do snapshot
 parametro mvn install forca atualizar snapshot
 criar o docker-compose
 	
-
-esta excutando migration ao executar testes	
 	
 	
 	//diferenca shutdowns projetos

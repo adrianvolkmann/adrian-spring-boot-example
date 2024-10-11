@@ -22,35 +22,6 @@ import jakarta.persistence.Table;
 @Table(name = "sql_types")
 public class SqlTypesEntity {
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(campoBoolean, campoDateTimeZoned, campoDouble, campoEnum, campoEnumString, campoFloat,
-				campoInteger, campoJsonb, campoLocalDate, campoLocalDateTime, campoLocalTime, campoVarchar,
-				campoVarcharLimitado, id);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		SqlTypesEntity other = (SqlTypesEntity) obj;
-		return Objects.equals(campoBoolean, other.campoBoolean)
-				&& Objects.equals(campoDateTimeZoned, other.campoDateTimeZoned)
-				&& Objects.equals(campoDouble, other.campoDouble) && campoEnum == other.campoEnum
-				&& campoEnumString == other.campoEnumString
-				&& Float.floatToIntBits(campoFloat) == Float.floatToIntBits(other.campoFloat)
-				&& Objects.equals(campoInteger, other.campoInteger) && Objects.equals(campoJsonb, other.campoJsonb)
-				&& Objects.equals(campoLocalDate, other.campoLocalDate)
-				&& Objects.equals(campoLocalDateTime, other.campoLocalDateTime)
-				&& Objects.equals(campoLocalTime, other.campoLocalTime)
-				&& Objects.equals(campoVarchar, other.campoVarchar)
-				&& Objects.equals(campoVarcharLimitado, other.campoVarcharLimitado) && Objects.equals(id, other.id);
-	}
-
 	@Id
 	@GeneratedValue
 	private UUID id;
@@ -205,6 +176,35 @@ public class SqlTypesEntity {
 
 	public void setCampoEnumString(EnumField campoEnumString) {
 		this.campoEnumString = campoEnumString;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(campoBoolean, campoDateTimeZoned, campoDouble, campoEnum, campoEnumString, campoFloat,
+				campoInteger, campoJsonb, campoLocalDate, campoLocalDateTime, campoLocalTime, campoVarchar,
+				campoVarcharLimitado, id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		SqlTypesEntity other = (SqlTypesEntity) obj;
+		return Objects.equals(campoBoolean, other.campoBoolean)
+				&& Objects.equals(campoDateTimeZoned, other.campoDateTimeZoned)
+				&& Objects.equals(campoDouble, other.campoDouble) && campoEnum == other.campoEnum
+				&& campoEnumString == other.campoEnumString
+				&& Float.floatToIntBits(campoFloat) == Float.floatToIntBits(other.campoFloat)
+				&& Objects.equals(campoInteger, other.campoInteger) && Objects.equals(campoJsonb, other.campoJsonb)
+				&& Objects.equals(campoLocalDate, other.campoLocalDate)
+				&& Objects.equals(campoLocalDateTime, other.campoLocalDateTime)
+				&& Objects.equals(campoLocalTime, other.campoLocalTime)
+				&& Objects.equals(campoVarchar, other.campoVarchar)
+				&& Objects.equals(campoVarcharLimitado, other.campoVarcharLimitado) && Objects.equals(id, other.id);
 	}
 
 }
