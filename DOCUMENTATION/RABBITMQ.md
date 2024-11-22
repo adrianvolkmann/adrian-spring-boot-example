@@ -295,3 +295,8 @@ No cenário descrito, se o **projeto A** (responsável por criar as exchanges e 
 - **No Projeto B**: Configure retry e fallback para lidar com a ausência de recursos, mas não deixe que ele crie filas/exchanges, preservando a separação de responsabilidades.
 
 Se precisar de exemplos específicos para configuração no Spring AMQP ou em outro framework, posso ajudar!
+
+
+--------------------
+PerfTest
+
